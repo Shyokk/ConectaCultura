@@ -9,12 +9,13 @@ body {
   background-color: #f4f8fb;
 }
 
-header,
 main {
   padding: 1.5rem;
+  min-height: 725px;
 }
 
 header {
+  padding: 1.5rem;
   color: #ffffff;
   background-color: #145da0;
 }
@@ -96,3 +97,74 @@ img {
   position: static;
 }
 
+.tabla-contenedor {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+caption {
+  padding: 0.75rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid #b8c4cf;
+  text-align: left;
+}
+
+thead {
+  color: #ffffff;
+  background-color: #145da0;
+}
+
+.formulario {
+  display: grid;
+  gap: 1rem;
+  max-width: 42rem;
+  
+}
+
+.formulario fieldset {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #b8c4cf;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem;
+  font: inherit;
+}
+
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+  width: auto;
+}
+
+.nuevo{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.mensaje-confirmacion{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25%;
+  background-color: #145ca067;
+  border-radius: 10px;
+  min-height: 300px;
+}
