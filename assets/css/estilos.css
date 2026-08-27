@@ -37,11 +37,12 @@ footer {
 }
 
 .tarjeta {
-padding: 1rem;
-background-color: #ffffff;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
 }
 .destacada {
-border: 2px solid #2a7f62;
+  border: 2px solid #2a7f62;
 }
 
 .cabecera-sitio,
@@ -167,4 +168,267 @@ thead {
   background-color: #145ca067;
   border-radius: 10px;
   min-height: 300px;
+}
+
+p { color: #183044; }
+/* Todos los párrafos */
+.etiqueta { color: #2a9d8f; }
+/* Cualquier elemento con class="etiqueta" */
+.tarjeta p { margin-bottom: 1rem; }
+/* Solo los párrafos que están dentro de .tarjeta */
+input[required] { border-left-width: 0.3rem; }
+/* Solo controles input que poseen required */
+a:hover { text-decoration-thickness: 0.15rem; }
+/* Enlaces mientras el puntero se encuentra sobre ellos */
+
+a { color: navy; } /* 0-0-1 */
+.menu a { color: white; } /* 0-1-1: gana en la navegación */
+
+.boton { background-color: blue; }
+a.boton { background-color: green; }
+.boton { background-color: orange; }
+
+body {
+ color: #183044;
+ font-family: Arial, sans-serif;
+}
+/* Los párrafos y títulos heredan normalmente color y fuente.
+ margin, padding, border y background no se heredan. */
+
+
+.tarjeta {
+ padding: 1rem; /* aire dentro de la tarjeta */
+ border: 1px solid #c9d4de;
+ margin-bottom: 2rem; /* distancia con la siguiente tarjeta */
+}
+
+
+.ejemplo {
+ width: 300px;
+ padding: 20px;
+ border: 2px solid;
+ /* ancho visible con content-box: 344px */
+}
+
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+}
+
+
+:root {
+ --color-primario: #145da0;
+ --color-primario-oscuro: #0b3d68;
+ --color-secundario: #2a9d8f;
+ --color-acento: #f4a261;
+ --color-texto: #183044;
+ --color-texto-suave: #526575;
+ --color-fondo: #f4f7fa;
+ --color-superficie: #ffffff;
+ --color-borde: #c9d4de;
+ --fuente-base: Arial, Helvetica, sans-serif;
+ --radio: 0.75rem;
+ --sombra: 0 0.5rem 1.25rem rgb(20 48 68 / 12%);
+ --ancho-contenido: 72rem;
+}
+
+:root {
+ --color-primario: #145da0; /* declaración */
+}
+.boton {
+ background-color: var(--color-primario); /* uso */
+}
+.aviso {
+ border-color: var(--color-aviso, #f4a261); /* valor alternativo */
+}
+
+.seccion-destacada {
+ --color-primario: #2a9d8f;
+}
+/* Los componentes dentro de esta sección usarán el nuevo color. */
+
+
+html {
+ font-size: 100%; /* respeta normalmente los 16px del navegador */
+}
+.tarjeta {
+ padding: 1.5rem; /* aproximadamente 24px con raíz de 16px */
+}
+
+html {
+ scroll-behavior: smooth;
+}
+body {
+ margin: 0;
+ color: var(--color-texto);
+ background: var(--color-fondo);
+ font-family: var(--fuente-base);
+ font-size: 1rem;
+ line-height: 1.6;
+}
+img,
+video {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+a {
+ color: var(--color-primario);
+}
+h1,
+h2,
+h3 {
+ line-height: 1.2;
+ text-wrap: balance;
+}
+main {
+ width: min(100% - 2rem, var(--ancho-contenido));
+ margin-inline: auto;
+}
+main {
+ padding-block: 2rem 4rem;
+}
+section + section {
+ margin-top: 3rem;
+}
+
+.cabecera-sitio {
+ padding: 1rem max(1rem, calc((100% - var(--ancho-contenido)) / 2));
+ color: #ffffff;
+ background: var(--color-primario-oscuro);
+}
+.marca {
+ color: #ffffff;
+ font-size: 1.35rem;
+ font-weight: 700;
+ text-decoration: none;
+}
+.menu {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+ margin: 1rem 0 0;
+  padding: 0;
+ list-style: none;
+}
+.menu a {
+ display: inline-block;
+ padding: 0.5rem 0.75rem;
+ color: #ffffff;
+ border-radius: 0.5rem;
+ text-decoration: none;
+}
+.menu a:hover,
+.menu a[aria-current="page"] {
+ background: var(--color-primario);
+}
+
+.etiqueta {
+ margin-bottom: 0.25rem;
+ color: var(--color-secundario);
+ font-size: 0.85rem;
+ font-weight: 700;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+}
+.tarjeta,
+.mensaje-confirmacion,
+.formulario fieldset {
+ padding: 1.5rem;
+ background: var(--color-superficie);
+ border: 1px solid var(--color-borde);
+ border-radius: var(--radio);
+ box-shadow: var(--sombra);
+}
+.boton,
+button {
+ display: inline-block;
+ width: fit-content;
+ padding: 0.7rem 1rem;
+ color: #ffffff;
+ background: var(--color-primario);
+ border: 0;
+ border-radius: 0.5rem;
+ font: inherit;
+ font-weight: 700;
+ text-decoration: none;
+ cursor: pointer;
+}
+.boton:hover,
+button:hover {
+ background: var(--color-primario-oscuro);
+}
+
+.tabla-contenedor {
+ max-width: 100%;
+ overflow-x: auto;
+}
+table {
+ width: 100%;
+ border-collapse: collapse;
+ background: var(--color-superficie);
+}
+caption,
+th,
+td {
+ padding: 0.75rem;
+ text-align: left;
+}
+th,
+td {
+ border: 1px solid var(--color-borde);
+}
+thead {
+ color: #ffffff;
+ background: var(--color-primario);
+}
+.formulario {
+ display: grid;
+ gap: 1rem;
+ max-width: 42rem;
+}
+.formulario fieldset {
+ display: grid;
+ gap: 0.75rem;
+}
+.formulario input,
+.formulario select,
+.formulario textarea {
+ width: 100%;
+ padding: 0.7rem;
+ color: inherit;
+ background: #ffffff;
+ border: 1px solid var(--color-borde);
+ border-radius: 0.4rem;
+ font: inherit;
+}
+.formulario input[type="radio"],
+.formulario input[type="checkbox"] {
+ width: auto;
+}
+
+:focus-visible {
+ outline: 3px solid var(--color-acento);
+ outline-offset: 3px;
+}
+input:required,
+select:required,
+textarea:required {
+ border-left: 0.3rem solid var(--color-primario);
+}
+input:focus,
+select:focus,
+textarea:focus {
+ border-color: var(--color-primario);
+}
+.salto-contenido {
+ position: absolute;
+ padding: 0.6rem 1rem;
+ color: #ffffff;
+ background: var(--color-primario-oscuro);
+ transform: translateY(-150%);
+}
+.salto-contenido:focus {
+ transform: translateY(0);
 }
