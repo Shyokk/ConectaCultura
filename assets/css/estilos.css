@@ -432,3 +432,13 @@ textarea:focus {
 .salto-contenido:focus {
  transform: translateY(0);
 }
+
+boton--secundario {
+ color: var(--color-primario-oscuro);
+ background: transparent;
+ border: 2px solid currentColor;
+}
+.boton--secundario:hover {
+ color: #ffffff;
+ background: var(--color-primario-oscuro);
+}
