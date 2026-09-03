@@ -10,20 +10,27 @@
 
   <!-- AQUI COMIENZA EL BODY -->
   <body>
-
     <!-- ESTE ES EL HEADER -->
-      <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
-        <header class="cabecera-sitio">
+    <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+    <header class="cabecera-sitio">
       <a class="marca" href="index.html">Conecta Cultura</a>
-      <nav aria-label="Navegación principal">
-        <ul class="menu">
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="agenda.html">Agenda</a></li>
-        <li><a href="participar.html">Participar</a></li>
-        </ul>
+            <button
+        id="boton-menu"
+        class="boton-menu"
+        type="button"
+        aria-label="Abrir o cerrar menú principal"
+        aria-controls="menu-principal"
+        aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="participar.html">Participar</a>
       </nav>
+
     </header>
     <!-- ESTE ES EL HEADER -->
 
@@ -65,6 +72,18 @@
           </article>
         </div>
       </section>
+
+      <h1 id="titulo-cartelera">Agenda cultural</h1>
+
+      <button id="boton-destacar" type="button">Destacar título</button>
+      
+      <button id="mostrar-todas" type="button">Todas</button>
+      <button id="mostrar-disponibles" type="button">
+        Con cupos
+      </button>
+
+
+      <section id="cartelera" class="rejilla-tarjetas"></section>
       <!-- ESTAS SON LAS NOTICIAS -->
 
       <!-- AQUI HAY UN PEQUEÑO INCISO -->
@@ -84,8 +103,10 @@
       <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
     </footer>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/menu.js"></script>
     <!-- AQUI ACABA EL FOOTER -->
 
   </body>
   <!-- AQUI ACABA EL BODY -->
+   
 </html>
